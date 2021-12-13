@@ -1,0 +1,235 @@
+
+/*
+CREATE TABLE Type_table (
+	ID INT NOT NULL PRIMARY KEY,
+    NAME VARCHAR(25) NOT NULL
+);
+
+CREATE TABLE Attribute_table (
+	ID INT NOT NULL PRIMARY KEY,
+    NAME VARCHAR(25) NOT NULL,
+    TypeID INT,
+    FOREIGN KEY (TypeID) REFERENCES Type_table(ID)
+);
+
+CREATE TABLE Product_table (
+    SKU VARCHAR(12) NOT NULL PRIMARY KEY,
+    Name VARCHAR(25) NOT NULL,
+    Price DOUBLE NOT NULL,
+    TypeID INT,
+    FOREIGN KEY (TypeID) REFERENCES Type_table(ID)
+);
+
+CREATE TABLE ProductDetails_table (
+	SKU VARCHAR(12) NOT NULL,
+    Attribute_id INT NOT NULL,
+    Attribute_value INT NOT NULL,
+    PRIMARY KEY(SKU, Attribute_id)
+);
+*/
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+/* ---------- General things ---------- */
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    background-color: white;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ---------- NavBar ---------- */
+
+.logo {
+    font-size: 40px;
+    width: auto;
+    float: left;
+    margin-left: 80px;
+    margin-top: 26px;
+}
+
+.actions {
+    float: right;
+    list-style: none;
+}
+
+.actions li {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+.actions li a:link,
+.actions li a:visited {
+    padding: 4px 0px 4px 0px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+.actions li a:hover,
+.actions li a:active {
+    border-bottom: 2px solid black;
+}
+
+.table{
+    border-top: 3px solid black;
+    width: 100%;
+    margin: auto;
+}
+
+#delete{
+    background-color: #FF4136;
+}
+
+#save{
+    background-color: #2ECC40;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    border-top: 3px solid black;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+
+/* CARDS */
+
+input[type=checkbox]{
+    margin: 5px 10px;
+}
+
+input[type=submit]{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 20px;
+    background-color: #f1f1f1;
+    line-height: 30px;
+  }
+
+  .textInCard {
+    text-align: center;
+  }
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    text-align: center;
+}
+
+
+/* FORM */
+.formBox{
+    background-color: rgb(224, 224, 224);
+    width: 30%;
+    font-size: 30px;
+    margin: 12px 10px;
+    padding: 1rem 2rem;
+}
+
+input[type=text] {
+    border: 1px solid black;
+    margin: 3px 10px;
+    border-radius: 4px;
+    position: absolute;
+    left: 200px;
+    width: 15%;
+    height: 26px;
+}
+
+select{
+    position: absolute;
+    left: 210px;
+    width: 15%;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
